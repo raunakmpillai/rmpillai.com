@@ -7,6 +7,10 @@
       display: flex;
       align-items: flex-start;
       padding: 20px;
+      border: 2px solid #aaa;  /* grey outline */
+      margin: 20px;            /* space around the box */
+      max-width: 800px;
+      background-color: #fff;  /* optional: make the box pop against bg */
     }
 
     .container img {
@@ -21,7 +25,28 @@
     .text h1 {
       margin-top: 0;
     }
+
+    .text p {
+        margin: 0.5em 0;   /* controls space between paragraphs */
+    }
+    .spacing {
+      margin: 1em 0; /* adjust vertical gap */
+    }
+
+    .inner-divider {
+      height: 2px;
+      background-color: #ccc;
+      margin: 10px 0;
+    }
     
+    .divider {
+      height: 4px;                   /* thickness of the bar */
+      background-color: #ffffff;      /* white “bar” */
+      border-bottom: 2px solid #aaa; /* subtle grey underline for inset effect */
+      margin: 20px 0;
+      box-shadow: inset 0 1px 0 #ccc; /* optional extra 3D effect */
+    }
+
     body {
       background-image: url('https://contemporary-home-computing.org/prof-dr-style/bg/wpaper.gif');
       background-repeat: repeat;   
@@ -30,24 +55,56 @@
       margin: 0;                   
       padding: 0;
     }
+    /* Chrome/Edge/Safari */
+    ::-webkit-scrollbar {
+      width: 16px;                  /* thicker scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #dcdcdc;          /* light grey track */
+      border: 1px solid #aaa;       /* retro outline */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #b0b0b0;          /* darker grey thumb */
+      border: 2px solid #dcdcdc;    /* inset border look */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #909090;          /* hover effect */
+    }
+
+    /* Firefox */
+    * {
+      scrollbar-width: auto;        /* wider than "thin" */
+      scrollbar-color: #b0b0b0 #dcdcdc; /* thumb color, track color */
+    }
+
     @media (max-width: 1081px) {
       .container {
-        flex-direction: column; /* stack vertically */
-        align-items: flex-start; /* left-align the content instead of centering */
+        flex-direction: column;     /* stack vertically */
+        align-items: center;        /* center contents */
+        text-align: center;         /* center text under the image */
       }
 
       .container img {
-        width: 50vw;     /* 50% of viewport width */
-        height: auto;    /* keep aspect ratio */
-        margin-right: 0; /* remove right margin when stacked */
-        margin-bottom: 20px; /* space below image */
+        width: 35vw;     /* 50% of viewport width */
+        height: auto;    
+        margin-right: 0;
+        margin-bottom: 20px;
       }
 
       .text {
-        max-width: none; /* remove width restriction */
-        width: auto;     /* let text flow naturally */
-        text-align: left; /* normal left-aligned text */
+        max-width: 90%;   /* keep text from stretching full width */
+        margin: 0 auto;   /* center horizontally */
+        text-align: center;
+        font-size: 16px;  /* keep base font size consistent */
       }
+
+      .text h1 {
+        font-size: 24px;  /* don’t let heading shrink too much */
+      }
+
     }
   </style>
 </head>
@@ -57,9 +114,10 @@
     <img src="https://raw.githubusercontent.com/raunakmpillai/rmpillai.com/cf7d6b91bbae6b7695317bc0830a3d94880db6eb/docs/rmp_headshot1_cropped.jpg" alt="headshot" width="240" height="300">
     <div class="text">
       <h1>Raunak M. Pillai</h1>
-      <p><a href="https://as.nyu.edu/faculty/raunak-pillai.html" target="_blank">Postdoctoral Associate</a>, NYU, Department of Psychology</p>
-      <p>Incoming <a href="https://www.stonybrook.edu/commcms/psychology/faculty/faculty_profiles/rpillai" target="_blank">Assistant Professor</a>, Stony Brook University (Fall 2026)</p>
-      <br><br>
+      <p><a href="https://as.nyu.edu/faculty/raunak-pillai.html" target="_blank">Postdoctoral Associate</a>, NYU, Department of Psychology, Social Psychology</p>
+      <div class="spacing"></div>
+      <p>Incoming <a href="https://www.stonybrook.edu/commcms/psychology/faculty/faculty_profiles/rpillai" target="_blank">Assistant Professor</a> (Fall 2026), Stony Brook University, Department of Psychology, Cognitive Science</p>
+      <div class="inner-divider"></div> <!-- grey bar -->
       <p>
         <a href="https://www.centerconflictcooperation.com" target="_blank">Center for Conflict and Cooperation</a>
       </p>
@@ -73,7 +131,7 @@
     </div>
   </div>
 
-  <div style="border-bottom: 2px solid black; margin: 20px 0;"></div>
+  <div class="divider"></div>
 
   <div class="text">
     <h2>Bio</h2>
@@ -82,14 +140,14 @@
     <p> My research examines the basic psychological processes by which we distinguish true from false information in our social environments. A central aim of my work is to address this question by integrating distinct theoretical perspectives from cognitive, social, and political psychology. Thus, I investigate how mental processes like memory, language processing and decision-making shape what people believe, as well as how such individual-level faculties are affected by interpersonal processes like social influence and intergroup dynamics to ultimately shape macro-level phenomena like the formation of public opinion. In addition to addressing these basic questions, I aim to address prominent problems like the spread of false and misleading information online.</p>
   </div>
 
-  <div style="border-bottom: 2px solid black; margin: 20px 0;"></div>
+  <div class="divider"></div>
 
   <div class="text">
     <h2>CV</h2>
     <p><a href="https://drive.google.com/open?id=1Ru5-8DaPMovAmQyvZChz6j5ItML3RhgS&usp=drive_fs" target="_blank">Link</a></p>
     </div>
 
-  <div style="border-bottom: 2px solid black; margin: 20px 0;"></div>
+  <div class="divider"></div>
 
   <div class="text">
     <h2>Where to find me online</h2>
