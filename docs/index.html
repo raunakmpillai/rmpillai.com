@@ -7,10 +7,10 @@
       display: flex;
       align-items: flex-start;
       padding: 20px;
-      border: 2px solid #aaa;  /* grey outline */
-      margin: 20px;            /* space around the box */
+      border: 2px solid #aaa;
+      margin: 30px;
       max-width: 800px;
-      background-color: #fff;  /* optional: make the box pop against bg */
+      background-color: #fff;
     }
 
     .container img {
@@ -19,7 +19,7 @@
 
     .text {
       max-width: 800px;
-      margin-left:20px
+      margin-left:30px
     }
 
     .text h1 {
@@ -27,10 +27,10 @@
     }
 
     .text p {
-        margin: 0.5em 0;   /* controls space between paragraphs */
+        margin: 0.1em 0;
     }
     .spacing {
-      margin: 1em 0; /* adjust vertical gap */
+      margin: 1em 0;
     }
 
     .inner-divider {
@@ -40,13 +40,35 @@
     }
     
     .divider {
-      height: 4px;                   /* thickness of the bar */
-      background-color: #ffffff;      /* white “bar” */
-      border-bottom: 2px solid #aaa; /* subtle grey underline for inset effect */
+      height: 4px;
+      background-color: #ffffff;
+      border-bottom: 2px solid #aaa;
       margin: 20px 0;
-      box-shadow: inset 0 1px 0 #ccc; /* optional extra 3D effect */
+      box-shadow: inset 0 1px 0 #ccc;
+    }
+    .custom-bullets {
+      list-style: none;       /* remove default bullets */
+      padding-left: 0;
     }
 
+    .custom-bullets li {
+      position: relative;
+      padding-left: 30px;      /* space for the bullet */
+      margin-bottom: 0.5em;
+    }
+
+    .custom-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); /* vertically center */
+      width: 16px;                 /* adjust to your GIF size */
+      height: 16px;
+      background-image: url('https://contemporary-home-computing.org/prof-dr-style/bg/image003.gif');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
     body {
       background-image: url('https://contemporary-home-computing.org/prof-dr-style/bg/wpaper.gif');
       background-repeat: repeat;   
@@ -57,52 +79,54 @@
     }
     /* Chrome/Edge/Safari */
     ::-webkit-scrollbar {
-      width: 16px;                  /* thicker scrollbar */
+      width: 16px;
     }
 
     ::-webkit-scrollbar-track {
-      background: #dcdcdc;          /* light grey track */
-      border: 1px solid #aaa;       /* retro outline */
+      background: #dcdcdc;
+      border: 1px solid #aaa;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #b0b0b0;          /* darker grey thumb */
-      border: 2px solid #dcdcdc;    /* inset border look */
+      background: #b0b0b0;
+      border: 2px solid #dcdcdc;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: #909090;          /* hover effect */
+      background: #909090;
     }
 
     /* Firefox */
     * {
-      scrollbar-width: auto;        /* wider than "thin" */
-      scrollbar-color: #b0b0b0 #dcdcdc; /* thumb color, track color */
+      scrollbar-width: auto;
+      scrollbar-color: #b0b0b0 #dcdcdc;
     }
 
     @media (max-width: 1081px) {
       .container {
-        flex-direction: column;     /* stack vertically */
-        align-items: center;        /* center contents */
-        text-align: center;         /* center text under the image */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 80%;     /* shrink to 90% of viewport */
+        margin: 0 auto;     /* center horizontally */
       }
 
       .container img {
-        width: 35vw;     /* 50% of viewport width */
+        width: 35vw;     
         height: auto;    
         margin-right: 0;
         margin-bottom: 20px;
       }
 
       .text {
-        max-width: 90%;   /* keep text from stretching full width */
-        margin: 0 auto;   /* center horizontally */
+        max-width: 90%;   
+        margin: 0 auto;   
         text-align: center;
-        font-size: 16px;  /* keep base font size consistent */
+        font-size: 16px;  
       }
 
       .text h1 {
-        font-size: 24px;  /* don’t let heading shrink too much */
+        font-size: 24px;  
       }
 
     }
@@ -114,36 +138,51 @@
     <img src="https://raw.githubusercontent.com/raunakmpillai/rmpillai.com/cf7d6b91bbae6b7695317bc0830a3d94880db6eb/docs/rmp_headshot1_cropped.jpg" alt="headshot" width="240" height="300">
     <div class="text">
       <h1>Raunak M. Pillai</h1>
-      <p><a href="https://as.nyu.edu/faculty/raunak-pillai.html" target="_blank">Postdoctoral Associate</a>, NYU, Department of Psychology, Social Psychology</p>
+      <p><a href="https://as.nyu.edu/faculty/raunak-pillai.html" target="_blank">Postdoctoral Associate</a></p>
+      <p>Department of Psychology, Social Psychology Area</p>
+      <p>New York University</p>
       <div class="spacing"></div>
-      <p>Incoming <a href="https://www.stonybrook.edu/commcms/psychology/faculty/faculty_profiles/rpillai" target="_blank">Assistant Professor</a> (Fall 2026), Stony Brook University, Department of Psychology, Cognitive Science</p>
-      <div class="inner-divider"></div> <!-- grey bar -->
+      <p>Incoming <a href="https://www.stonybrook.edu/commcms/psychology/faculty/faculty_profiles/rpillai" target="_blank">Assistant Professor</a> (Fall 2026)</p>
+      <p>Department of Psychology, Cognitive Science Area</p>
+      <p>Stony Brook University</p>
+      <div class="inner-divider"></div>
       <p>
         <a href="https://www.centerconflictcooperation.com" target="_blank">Center for Conflict and Cooperation</a>
       </p>
       <p>6 Washington Place, Room 522</p>
       <p>New York, NY 10003</p>
-      <p>
-          <img src="https://contemporary-home-computing.org/prof-dr-style/bg/rotating.gif" 
-          alt="rotating gif" 
-          style="width:20px; height:20px; vertical-align:middle; margin-left:0px; margin-right:0px">
-          raunak [dot] pillai [at] nyu [dot] edu</p>
+<p>
+  <img src="https://contemporary-home-computing.org/prof-dr-style/bg/rotating.gif" 
+       alt="rotating gif" 
+       style="width:20px; height:20px; vertical-align:text-bottom; margin:0 0px;">
+  raunak [dot] pillai [at] nyu [dot] edu
+</p>
     </div>
   </div>
 
   <div class="divider"></div>
 
   <div class="text">
-    <h2>Bio</h2>
+    <h2>About me</h2>
     <p>I am a social cognitive psychologist studying the nature of beliefs and belief updating. </p>
-    <p><p>
-    <p> My research examines the basic psychological processes by which we distinguish true from false information in our social environments. A central aim of my work is to address this question by integrating distinct theoretical perspectives from cognitive, social, and political psychology. Thus, I investigate how mental processes like memory, language processing and decision-making shape what people believe, as well as how such individual-level faculties are affected by interpersonal processes like social influence and intergroup dynamics to ultimately shape macro-level phenomena like the formation of public opinion. In addition to addressing these basic questions, I aim to address prominent problems like the spread of false and misleading information online.</p>
+    <p>&nbsp;<p>
+    <p> My research examines the basic psychological processes by which we distinguish true from false information in our social environments. A central aim of my work is to address this question by integrating distinct theoretical perspectives from cognitive, social, and political psychology. Thus, I investigate how mental processes like memory, language processing and decision-making shape what people believe, as well as how such individual-level faculties are affected by interpersonal processes like social influence and intergroup dynamics to ultimately shape macro-level phenomena like the formation of public opinion. In addressing these basic questions, I aim to inform solutions to pressing problems like the spread of false and misleading information online.</p>
   </div>
 
   <div class="divider"></div>
 
   <div class="text">
-    <h2>CV</h2>
+    <h2>Education</h2>
+    <ul class="custom-bullets">
+      <li>2024  &nbsp;-&nbsp;  Ph.D., Psychology, Vanderbilt University</li>
+      <li>2019  &nbsp;-&nbsp;  B.A., Neuroscience, Vanderbilt University</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+  
+  <div class="text">
+    <h2>Curriculum vitae</h2>
     <p><a href="https://drive.google.com/open?id=1Ru5-8DaPMovAmQyvZChz6j5ItML3RhgS&usp=drive_fs" target="_blank">Link</a></p>
     </div>
 
@@ -155,8 +194,7 @@
     <p><a href="https://scholar.google.com/citations?hl=en&user=8iHuw9AAAAAJ" target="_blank">Google Scholar</a></p>
     <p><a href="https://osf.io/4t29y/" target="_blank">OSF</a></p>
     <p><a href="https://www.goodreads.com/user/show/162752541-raunak-pillai" target="_blank">Goodreads</a></p>
-    </div>
-
+  </div>
 
 </body>
 </html>
