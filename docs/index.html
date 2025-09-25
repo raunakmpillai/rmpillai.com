@@ -30,22 +30,23 @@
       margin: 0;                   
       padding: 0;
     }
-    @media (max-width: 1081px) {
+    @media (max-width: 768px) {
       .container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* stack vertically */
+        align-items: flex-start; /* left-align the content instead of centering */
       }
 
       .container img {
-        width: 180px;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 20px;
+        width: 50vw;     /* 50% of viewport width */
+        height: auto;    /* keep aspect ratio */
+        margin-right: 0; /* remove right margin when stacked */
+        margin-bottom: 20px; /* space below image */
       }
 
       .text {
-        max-width: 90%;
-        text-align: center;
+        max-width: none; /* remove width restriction */
+        width: auto;     /* let text flow naturally */
+        text-align: left; /* normal left-aligned text */
       }
     }
   </style>
