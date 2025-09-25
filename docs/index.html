@@ -10,7 +10,9 @@
       border: 2px solid #aaa;
       margin: 30px;
       max-width: 800px;
-      background-color: #fff;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #ffffff;
     }
 
     .container img {
@@ -47,13 +49,13 @@
       box-shadow: inset 0 1px 0 #ccc;
     }
     .custom-bullets {
-      list-style: none;       /* remove default bullets */
+      list-style: none;
       padding-left: 0;
     }
 
     .custom-bullets li {
       position: relative;
-      padding-left: 30px;      /* space for the bullet */
+      padding-left: 30px;
       margin-bottom: 0.5em;
     }
 
@@ -62,13 +64,14 @@
       position: absolute;
       left: 0;
       top: 50%;
-      transform: translateY(-50%); /* vertically center */
-      width: 16px;                 /* adjust to your GIF size */
+      transform: translateY(-50%);
+      width: 16px;
       height: 16px;
       background-image: url('https://contemporary-home-computing.org/prof-dr-style/bg/image003.gif');
       background-size: contain;
       background-repeat: no-repeat;
     }
+
     body {
       background-image: url('https://contemporary-home-computing.org/prof-dr-style/bg/wpaper.gif');
       background-repeat: repeat;   
@@ -77,6 +80,7 @@
       margin: 0;                   
       padding: 0;
     }
+
     /* Chrome/Edge/Safari */
     ::-webkit-scrollbar {
       width: 16px;
@@ -107,8 +111,9 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        max-width: 80%;     /* shrink to 90% of viewport */
-        margin: 0 auto;     /* center horizontally */
+        max-width: 80%;
+        margin: 0 auto;
+        margin-top: 30px
       }
 
       .container img {
@@ -151,12 +156,12 @@
       </p>
       <p>6 Washington Place, Room 522</p>
       <p>New York, NY 10003</p>
-<p>
-  <img src="https://contemporary-home-computing.org/prof-dr-style/bg/rotating.gif" 
-       alt="rotating gif" 
-       style="width:20px; height:20px; vertical-align:text-bottom; margin:0 0px;">
-  raunak [dot] pillai [at] nyu [dot] edu
-</p>
+      <p>
+        <img src="https://contemporary-home-computing.org/prof-dr-style/bg/rotating.gif" 
+            alt="rotating gif" 
+            style="width:20px; height:20px; vertical-align:text-bottom; margin:0 0px;">
+        raunak [dot] pillai [at] nyu [dot] edu
+      </p>
     </div>
   </div>
 
@@ -194,6 +199,9 @@
     <p><a href="https://scholar.google.com/citations?hl=en&user=8iHuw9AAAAAJ" target="_blank">Google Scholar</a></p>
     <p><a href="https://osf.io/4t29y/" target="_blank">OSF</a></p>
     <p><a href="https://www.goodreads.com/user/show/162752541-raunak-pillai" target="_blank">Goodreads</a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
   </div>
 
 </body>
